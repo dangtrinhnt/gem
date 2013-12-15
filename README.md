@@ -8,7 +8,10 @@ This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-
 
 ##### + 12/15/2013:
 
-+ Call gyb commands (backup, restore) using service account  from python script in gem.py
++ Backup emails
++ Restore emails
++ Delete emails folder
++ Migrate emails of all users to new domain
 
 
 ### Requirements
