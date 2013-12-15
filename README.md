@@ -8,6 +8,7 @@ This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-
 
 ##### + 12/15/2013:
 
++ Enable IMAP for all users (only need to do this on old domain)
 + Backup emails
 + Restore emails
 + Delete emails folder
