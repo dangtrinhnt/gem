@@ -1,60 +1,62 @@
-#! /usr/bin/python
+#! /usr/bin/env python
 
-import httplib2
-from httplib import BadStatusLine
-# import simplejson
+import subprocess
+import sys
 
-from apiclient.discovery import build
-from apiclient.http import MediaFileUpload
-from apiclient import errors
-from oauth2client.client import OAuth2WebServerFlow
-from oauth2client.client import SignedJwtAssertionCredentials
-from oauth2client.client import AccessTokenRefreshError
-
-import gdata.apps.emailsettings.client
-import gdata.client.BadAuthentication
-#~ from commons import *
+from commons import *
 
 
 
 
 
-# domain-wide
-def create_service(service_account_pkcs12_file,\
-						service_account_email, scope, user_email):
-	"""Build and returns a Drive service object authorized with the service accounts
-		that act on behalf of the given user.
+def backup_emails(email, service_account_email, email_folder):
+	command = [
+		"python", "gyb.py",
+		"--email", email,
+		"--action", "backup",
+		"--local-folder", email_folder,
+		"--service-account", service_account_email
+	]
+	subprocess.call(command)
 
-	Args:
-		user_email: The email of the user.
-	Returns:
-		Drive service object.
-	"""
-	f = file(service_account_pkcs12_file, 'rb')
-	key = f.read()
-	f.close()
-
-	credentials = SignedJwtAssertionCredentials(service_account_email, key,\
-						scope=scope, sub=user_email)
-	print "Finish getting credentials for user %s" % user_email
-
-	http = httplib2.Http()
-	http = credentials.authorize(http)
-
-	print "Finish authorize user %s" % user_email
-
-	try:
-		service = build('drive', 'v2', http=http)
-		return service
-	except AccessTokenRefreshError, error:
-		print "Error when getting drive service of user %s:\n > Error: %s"\
-						% (user_email, error)
-
-	return None
 	
-	
-	
+def restore_emails(email, service_account_email, email_folder):
+	command = [
+		"python", "gyb.py",
+		"--email", email,
+		"--action", "restore",
+		"--local-folder", email_folder,
+		"--service-account", service_account_email
+	]
+	subprocess.call(command)
 
+
+def erase_backuped_emails(email_folder):
+	email_folder += '/*'
+	command = [
+		"rm", "-rf",
+		email_folder
+	]
+	subprocess.call(command)
+
+
+def migrate_emails(src_email, dest_email, service_account_email, emails_folder):
+	backup_emails(src_email, service_account_email, emails_folder)
+	restore_emails(dest_email, service_account_email, emails_folder)	
+	erase_backuped_emails(emails_folder)
+
+def migrate_emails_all(emails_dict, service_account_email, emails_folder):
+	for emails in emails_dict:
+		migrate_emails(emails['src_email'], emails['dest_email'], service_account_email, emails_folder)
+
+
+
+if __name__ == "__main__":
+	emails_csv_path = sys.argv[1]
+	emails_dict = get_dict_data_from_csv_file(emails_csv_path)
+	
+	if emails_dict:
+		migrate_emails_all(emails_dict, SERVICE_ACCOUNT_EMAIL, EMAILS_FOLDER)
 		
 
 
