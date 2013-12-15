@@ -11,6 +11,14 @@ This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-
 + Call gyb commands (backup, restore) using service account  from python script in gem.py
 
 
+# Requirements
+
++ gdata==2.0.18
++ google-api-python-client==1.2
++ httplib2==0.8
++ pyOpenSSL==0.13.1
++ uritemplate==0.6
+
 
 # References
 
