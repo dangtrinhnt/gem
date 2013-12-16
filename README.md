@@ -1,7 +1,7 @@
 GEM - Google Emails Migration
 =============================
 
-This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-back/) as the core to help you to migrate all users's emails from old domain to new domain in Google App.
+This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-back/) as the core to help you to migrate all users's emails from old domain to the new one in Google App.
 
 
 ### Update
