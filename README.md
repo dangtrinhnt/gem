@@ -6,6 +6,12 @@ This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-
 
 ### Update
 
+
+##### + 12/16/2013:
+
++ Use condition number
+
+
 ##### + 12/15/2013:
 
 + Enable IMAP for all users (only need to do this on old domain)
