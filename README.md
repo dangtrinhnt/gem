@@ -39,7 +39,9 @@ This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-
 ##### 1/ Create a virtualenv environment and install requirements:
 
 > username@user-host:/path/to/gem$ virtualenv /home/.venv/your_env
+
 > username@user-host:/path/to/gem$ source /home/.venv/your_env/bin/activate
+
 > (your_env)username@user-host:/path/to/gem$ pip install -r requirements.txt
 
 ##### 2/ Enable IMAP on all user accounts (only old domain):
