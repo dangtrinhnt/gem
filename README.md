@@ -54,14 +54,14 @@ This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-
 
 ##### 3/ Run the migration script to start the emails migrations:
 
-	`(your_env)username@user-host:/path/to/gem$ python gem.py /path/to/email_mapping_list.csv all`
+	`(your_env)username@user-host:/path/to/gem$ python gem.py /path/to/email_mapping_list.csv <condition number> /path/to/emails/folder`
 
 	* email_mapping_list.csv (2 columns: src - old domain email address, dest - new domain email address):
 	
 	`src,dest
 	oldomain@mydomain.com,newdomain@mydomain.com`
 
-	* all: condition number, all posible numbers are: 
+	* condition number: all posible numbers are: 
 
 	`0,1,2,3,4,5,6,7,8,9 or 'all'`
 
