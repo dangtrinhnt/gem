@@ -48,6 +48,7 @@ This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-
 
 * username_list.csv (one username per line):
 
+|           |
 | --------- |
 | username1 |
 | username2 |
