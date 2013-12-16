@@ -34,40 +34,40 @@ This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-
 
 ### Usage
 
-1. Create a virtualenv environment and install requirements:
+	1. Create a virtualenv environment and install requirements:
 
-`username@user-host:/path/to/gem$ virtualenv /home/.venv/your_env`
+		`username@user-host:/path/to/gem$ virtualenv /home/.venv/your_env`
+		
+		`username@user-host:/path/to/gem$ source /home/.venv/your_env/bin/activate`
+		
+		`(your_env)username@user-host:/path/to/gem$ pip install -r requirements.txt`
 
-`username@user-host:/path/to/gem$ source /home/.venv/your_env/bin/activate`
 
-`(your_env)username@user-host:/path/to/gem$ pip install -r requirements.txt`
+	2. Enable IMAP on all user accounts (only old domain):
 
+		`(your_env)username@user-host:/path/to/gem$ ./enable_imap.py /path/to/username_list.csv`
 
-2. Enable IMAP on all user accounts (only old domain):
+		+ Notes:
+			+ username_list.csv (one username per line):
+		
+			`username1
+			username2
+			username3
+			...`
 
-`(your_env)username@user-host:/path/to/gem$ ./enable_imap.py /path/to/username_list.csv`
+	3. Run the migration script to start the emails migrations:
 
-+ Notes:
-	+ username_list.csv (one username per line):
-	
-	`username1
-	username2
-	username3
-	...`
-
-3. Run the migration script to start the emails migrations:
-
-`(your_env)username@user-host:/path/to/gem$ python gem.py /path/to/email_mapping_list.csv all`
-
-+ Notes:
-	+ email_mapping_list.csv (2 columns: src - old domain email address, dest - new domain email address):
-	
-	`src,dest
-	oldomain@mydomain.com,newdomain@mydomain.com`
-	
-	+ all: condition number, all posible numbers are: 
-	
-	`0,1,2,3,4,5,6,7,8,9 or 'all'`
+		`(your_env)username@user-host:/path/to/gem$ python gem.py /path/to/email_mapping_list.csv all`
+		
+		+ Notes:
+			+ email_mapping_list.csv (2 columns: src - old domain email address, dest - new domain email address):
+			
+			`src,dest
+			oldomain@mydomain.com,newdomain@mydomain.com`
+			
+			+ all: condition number, all posible numbers are: 
+			
+			`0,1,2,3,4,5,6,7,8,9 or 'all'`
 		
 
 ### References
