@@ -10,6 +10,8 @@ This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-
 ##### + 12/16/2013:
 
 + Use condition number
++ Use emails folder input
++ Get error users when enabling IMAP
 
 
 ##### + 12/15/2013:
