@@ -62,9 +62,6 @@ This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-
 
 * email_mapping_list.csv (2 columns: src - old domain email address, dest - new domain email address):
 
-`src,dest
-oldomain@mydomain.com,newdomain@mydomain.com`
-
 | src                    | dest                    |
 | ---------------------- | ----------------------- |
 | oldomain1@mydomain.com | newdomain1@mydomain.com |
