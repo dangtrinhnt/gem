@@ -62,11 +62,11 @@ This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-
 
 * email_mapping_list.csv (2 columns: src - old domain email address, dest - new domain email address):
 
-| src                    | dest                    |
-| ---------------------- | ----------------------- |
-| oldomain1@mydomain.com | newdomain1@mydomain.com |
-| oldomain2@mydomain.com | newdomain2@mydomain.com |
-| oldomain3@mydomain.com | newdomain3@mydomain.com |
+| src                     | dest                    |
+| ----------------------- | ----------------------- |
+| username1@olddomain.com | username1@newdomain.com |
+| username2@olddomain.com | username2@newdomain.com |
+| username3@olddomain.com | username3@newdomain.com |
 
 
 * condition number: all posible numbers are: 
