@@ -57,8 +57,9 @@ def migrate_emails_all(emails_dict, service_account_email, email_folder, conditi
 	for emails in emails_dict:
 		num = str_to_num(emails['src']) % 10
 		if num in condition_number or condition_number[0]==-1:
+			print "Migrating emails of user %s" % emails['src']
 			migrate_emails(emails['src'], emails['dest'], service_account_email, email_folder)
-
+			print "Finish migrate emails of user %s" % emails['src']
 
 
 if __name__ == "__main__":
