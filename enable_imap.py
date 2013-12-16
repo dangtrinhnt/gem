@@ -5,21 +5,14 @@ from gdata.client import BadAuthentication
 from gdata.client import RequestError
 import csv
 import socket
-if socket.gethostname() in ['trinh-pc',]: # add your hostname here
+if socket.gethostname() in ['trinh-pc', 'SRVR-UMailMigration',]: # add your hostname here
 	from settings_local import *
 else:
 	from settings import *
 import sys
+from commons import *
 
 
-
-def get_username_list_from_text(username_file_path):
-	# username_list = []
-	text_file = open(username_file_path, 'rb')
-	username_list = text_file.read()
-	text_file.close()
-	username_list = username_list.split('\n')
-	return username_list
 
 
 def create_gdata_client(domain, admin_email, admin_password, appname='GEM'):
