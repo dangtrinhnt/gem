@@ -70,8 +70,10 @@ if __name__ == "__main__":
 	else:
 		condition_number = map(int, sys.argv[2].split(','))
 
+	emails_folder = sys.argv[3]
+
 	if emails_dict:
-		migrate_emails_all(emails_dict, SERVICE_ACCOUNT_EMAIL, EMAILS_FOLDER, condition_number)
+		migrate_emails_all(emails_dict, SERVICE_ACCOUNT_EMAIL, emails_folder, condition_number)
 		
 
 
