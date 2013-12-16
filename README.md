@@ -22,6 +22,7 @@ This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-
 + httplib2==0.8
 + pyOpenSSL==0.13.1
 + uritemplate==0.6
++ gyb==0.20a
 
 
 ### References
