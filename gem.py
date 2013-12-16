@@ -47,11 +47,11 @@ def erase_backuped_emails(email_folder):
 
 
 def migrate_emails(src_email, dest_email, service_account_email, email_folder):
-	print "Migrating emails of user %s" % emails['src']
+	print "Migrating emails of user %s" % src_email
 	backup_emails(src_email, service_account_email, email_folder)
 	restore_emails(dest_email, service_account_email, email_folder)	
 	erase_backuped_emails(email_folder)
-	print "Finish migrate emails of user %s" % emails['src']
+	print "Finish migrate emails of user %s" % src_email
 
 
 def migrate_emails_all(emails_dict, service_account_email, email_folder, condition_number):
