@@ -3,7 +3,7 @@
 import subprocess
 import sys
 import socket
-if socket.gethostname() in ['trinh-pc',]: # add your hostname here
+if socket.gethostname() in ['trinh-pc', 'SRVR-UMailMigration',]: # add your hostname here
 	from settings_local import *
 else:
 	from settings import *
