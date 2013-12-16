@@ -34,7 +34,7 @@ This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-
 
 ### Usage
 
-0. Create a virtualenv environment and install requirements:
+1. Create a virtualenv environment and install requirements:
 
 `username@user-host:/path/to/gem$ virtualenv /home/.venv/your_env`
 
@@ -43,7 +43,7 @@ This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-
 `(your_env)username@user-host:/path/to/gem$ pip install -r requirements.txt`
 
 
-1. Enable IMAP on all user accounts (only old domain):
+2. Enable IMAP on all user accounts (only old domain):
 
 `(your_env)username@user-host:/path/to/gem$ ./enable_imap.py /path/to/username_list.csv`
 
@@ -55,7 +55,7 @@ This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-
 	username3
 	...`
 
-2. Run the migration script to start the emails migrations:
+3. Run the migration script to start the emails migrations:
 
 `(your_env)username@user-host:/path/to/gem$ python gem.py /path/to/email_mapping_list.csv all`
 
@@ -65,7 +65,7 @@ This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-
 	`src,dest
 	oldomain@mydomain.com,newdomain@mydomain.com`
 	
-	+ all: condition number, all posible numbers is: 
+	+ all: condition number, all posible numbers are: 
 	
 	`0,1,2,3,4,5,6,7,8,9 or 'all'`
 		
