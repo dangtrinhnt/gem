@@ -48,9 +48,10 @@ This project uses the [Got-Your-Back script](https://code.google.com/p/got-your-
 
 * username_list.csv (one username per line):
 
-`username1
-username2
-username3`
+| username1 |
+| username2 |
+| username3 |
+
 
 ##### 3/ Run the migration script to start the emails migrations:
 
@@ -60,6 +61,13 @@ username3`
 
 `src,dest
 oldomain@mydomain.com,newdomain@mydomain.com`
+
+| src                    | dest                    |
+| ---------------------- | ----------------------- |
+| oldomain1@mydomain.com | newdomain1@mydomain.com |
+| oldomain2@mydomain.com | newdomain2@mydomain.com |
+| oldomain3@mydomain.com | newdomain3@mydomain.com |
+
 
 * condition number: all posible numbers are: 
 
