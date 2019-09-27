@@ -1,5 +1,5 @@
 gdata==2.0.18
 google-api-python-client==1.7.11
-httplib2==0.13.1
+httplib2==0.14.0
 pyOpenSSL==17.5.0
 uritemplate==3.0.0
